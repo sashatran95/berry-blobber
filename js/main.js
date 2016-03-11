@@ -36,6 +36,35 @@ var redCurrant = {
 
 // Write your function here, name it `writeBerries`
 
+var writeBerries = function (berries) {
+  document.write('<h1>Berries</h1>');
+  document.write('<ol>');
+
+  berries.forEach(function (fruitBerry) {
+    document.write('<h2>' + fruitBerry.name + '</h2>');
+    document.write('<dl>');
+    document.write('<dt>Grows On A Shrub?</dt>');
+    document.write('<dt>Energy</dt>');
+    document.write('<dd>' + fruitBerry.energy + '</dd>');
+    document.write('<dt>Carbohydrates</dt>');
+    document.write('<dd>' + fruitBerry.carbs + '</dd>');
+    document.write('<dt>Protein</dt>');
+    document.write('<dd>' + fruitBerry.protein + '</dd>');
+
+    document.write('<dd>');
+
+    if (fruitBerry.onShrub) {
+      document.write('Yes');
+    } else {
+      document.write('No');
+    }
+
+    document.write('<dd>');
+
+    document.write('<dl>');
+
+  });
+};
 
 // ##########################################################
 // START DO NOT CHANGE ZONE
